@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: ashish_development
+  pool: 5
+  username: postgres
+  password: ashish
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: ashish_test
+  pool: 5
+  username: postgres
+  password: ashish
