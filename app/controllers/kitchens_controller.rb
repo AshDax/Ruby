@@ -5,7 +5,48 @@ class KitchensController < ApplicationController
     end
 
     def show
-        @items = Item.where(kitchen_id: params[:id]).all()
+        @kitchen = Kitchen.find(params[:id])
     end
 
+    def new
+        @kitchen = Kitchen.new
+    end
+
+    def create
+        
+        @kitchen = Kitchen.new(kitchen_params)
+
+        if @kitchen.save
+            redirect_to action: 'index'
+        else
+            render :new, status: :unprocessable_entity
+        end
+    end
+
+
+    def edit
+        @kitchen = Kitchen.find(params[:id])
+    end
+
+    def update
+        @kitchen = Kitchen.find(params[:id])
+
+        if @kitchen.update(kitchen_params)
+            redirect_to action: 'index'
+        else
+            render :edit, status: :unprocessable_entity
+        end
+    end
+
+    def destroy 
+        @kitchen = Kitchen.find(params[:id])
+        if @kitchen.destroy(kitchen_params)
+            redirect_to action: 'index'
+        end
+    end
+
+    private
+        def kitchen_params
+            params.require(:kitchen).permit(:name)
+        end
 end

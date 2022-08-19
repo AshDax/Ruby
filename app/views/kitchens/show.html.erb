@@ -1,8 +1,16 @@
-<h1>These are the names of the kitchen items</h1>
+<h1>Kitchen Items</h1>
 
-<% @items.each do |item| %>
+<ul>
+  <% @kitchen.items.each do |item| %>
+    
+    <li>
+      <%= item.name %>
+    </li>     
+    
+  <% end %>
 
-  <li>
-    <%= item.name %>
-  </li>     
-<% end %>
+ <li> <%= link_to "Edit", edit_kitchen_path(@kitchen) %> </li>
+
+ <li> <%= link_to "Delete kitchen", kitchens_path(@kitchen.id) %> </li>
+
+</ul>
