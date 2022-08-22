@@ -1,0 +1,32 @@
+1. Associations (has one, has many, many to one)
+2. .erb, .haml templates
+3. self in Ruby
+4. member, collections, resources
+5. rake: rake tasks,rake commands, rake file
+6. Rails work on BDD/ Test Driven Development
+7. rspec for unit testing : https://rspec.info/
+8. mime(mime test)
+9. Puma : localhost server
+10. Factory for creating testing data
+11. Platform docs reading
+12. ActiveRecords 
+13. Always create new migrations
+14. Callbacks (before_save, after_save)
+15. devise gem(token based authentication system) token, refresh token
+16. warden(authorization gem)
+17. Diff- has_many_through and has_belongs_to_many
+18. initilizers
+19. garbage collection in rails
+20. gemfile and gemfile. Lock
+21. url encrytion through rake
+22. Byebug
+23. robocop
+24. Link_to
+25. Redirect_to and render
+26. Ruby Version Manager [RVM]
+
+
+
+
+
+
