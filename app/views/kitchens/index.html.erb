@@ -1,0 +1,15 @@
+<h1>Kitchens</h1>
+
+<ul>
+    <% @kitchens.each do |kitchen| %>
+
+      <li>
+        <a href="/kitchens/<%= kitchen.id %>">
+          <%= kitchen.name %>
+        </a>
+      </li>
+  
+    <% end %>
+</ul>
+
+<%= link_to "New Kitchen", new_kitchen_path %>
