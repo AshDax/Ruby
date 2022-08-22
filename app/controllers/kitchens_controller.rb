@@ -40,9 +40,8 @@ class KitchensController < ApplicationController
 
     def destroy 
         @kitchen = Kitchen.find(params[:id])
-        if @kitchen.destroy(kitchen_params)
-            redirect_to action: 'index'
-        end
+        @kitchen.destroy            
+        redirect_to root_path
     end
 
     private

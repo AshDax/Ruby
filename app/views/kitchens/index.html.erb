@@ -2,11 +2,8 @@
 
 <ul>
     <% @kitchens.each do |kitchen| %>
-
       <li>
-        <a href="/kitchens/<%= kitchen.id %>">
-          <%= kitchen.name %>
-        </a>
+        <%= link_to "#{kitchen.name}", kitchen_path(kitchen)%>
       </li>
   
     <% end %>
